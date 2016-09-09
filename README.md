@@ -1,21 +1,54 @@
 # Crane
 
+[![Gitter](https://badges.gitter.im/Dataman-Cloud/crane.svg)](https://gitter.im/Dataman-Cloud/crane?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 ![Crane](doc/img/crane-logo-black.png)
 
-Crane, maintained by dataman-cloud, is a docker container control plane based on docker built-in swarm.
+
+Crane, maintained by dataman-cloud, is a docker container control plane based on docker built-in swarm. Besides swarm features, Crane implemented the functionalities usually required by the enterprise, such as private registries authentation, ACL and application stack templates share. The smart fuzzy search function is giving user a hand to skip to the desired page quickly. The stack to be deployed can carry the registry-auth info, which is stored by the private registries authentation function, to pull private registry images, without docker login needed. User can share his/her private images by clicking the *public* button in image management.
 
 ## Features
 
-  * **Application stack**:
-  * **Registry**:
-  * **Node operation**:
-  * **Overlay network management**:
-  * **Private registry authorization**:
-    * [应用](get-started/stack.md)
-    * [镜像](get-started/registry.md)
-    * [主机](get-started/node.md)
-    * [网络](get-started/network.md)
-    * [仓库认证](get-started/registry-auth.md)
+  * **Swarm features**: Portal every feature of swarm almost. Crane has highlighted the common swarm functions and improved the user experience through the friendly frontend.
+  * **Stack templates management**: User can save the running stack as a template, then, others will deploy the template as soon as possible.
+  * **Image management**: The private image pushed by the user can be publiced to others.
+  * **Fuzzy search**: A in-memory index maintained by the backend serves the function.
+  * **Node operation**: Crane is showing the detail infos about node such as kernel version, docker info, docker images or containers in the given node and so on.
+  * **Overlay network management**: The overlay network CRUD.
+  * **Private registries authentation**: User can save his/her private registry username and password to Crane, then, the to-be-deployed stack can use the registry-auth to pull private registry images.
+  * **Webssh**: Command 'docker exec' is the magic.
+
+## Installation
+
+
+
+## How to use it
+
+Visit .... to use
+
+Please click [Crane in Chinese](https://dataman.gitbooks.io/crane/content/) for more details.
+
+## Community
+
+[![Gitter](https://badges.gitter.im/Dataman-Cloud/crane.svg)](https://gitter.im/Dataman-Cloud/crane?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
+wechat group: 数人云Crane技术交流群
+
+## Contribution
+
+Both pull-request or issue are welcomed from the community.
+
+## convention
+
+  ### repo branch
+    * `master`: development branch in active. PR will be merged into this `master` branch.
+    * `release`: version control. Tagged commits or hotfix PR will be pushed here. Maintained by the repo owners.
+
+## License
+
+Crane is available under the [Apache 2 license](./LICENSE).
+
+
 
 ## Quick Start
 
@@ -37,6 +70,7 @@ Crane, maintained by dataman-cloud, is a docker container control plane based on
   sleep 20
   cd api_test&&./run.sh
   ```
+<<<<<<< 1c360fa4e25322b3f09cd29e96c4e46fcb554193
 
 ## Open ports between the hosts
 
@@ -78,3 +112,5 @@ docker stack支持compose功能，现在这个功能点在实验阶段必须要�
 * swarm 中文文档： https://yeasy.gitbooks.io/docker_practice/content/swarm/usage.html
 * docker 学习大杂烩：https://github.com/veggiemonk/awesome-docker
 * 网络： http://collabnix.com/archives/1391
+=======
+>>>>>>> Updated README.md
